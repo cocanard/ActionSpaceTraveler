@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: NotificationContent_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 136578d94199e44329944edb8919ad86, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8685346816
+    m_Localized: "Vous avez d\xE9truit une plan\xE8te, votre influence globale diminue"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 325829255168
+    m_Localized: "Vous avez re\xE7u un power up utilisable une fois"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 946791768064
+    m_Localized: "Vous n'\xE9tiez pas le bienvenue, vous avez pris des d\xE9gats"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 789761220608
+    m_Localized: "Votre influence vous a permis de r\xE9g\xE9n\xE9rer votre vie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2214289465344
+    m_Localized: "Cette plan\xE8te vous est hostile, des ennemies ont \xE9t\xE9 appel\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3596193241227264
+    m_Localized: "Vous avez vaincu un boss, vous recevez de la vie, un power up et
+      votre influence aupr\xE8s des plan\xE8tes augmente"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19890897373093888
+    m_Localized: "Vous avez d\xE9truit une tourelle hostile \xE0 une plan\xE8te,
+      votre influence globale augmente"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

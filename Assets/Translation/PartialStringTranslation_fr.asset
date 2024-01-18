@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: PartialStringTranslation_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 7075316cb176b4ec79de84c34b0de802, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 6906257346707324954
+  m_TableData:
+  - m_Id: 20324540416
+    m_Localized: Record :{score}
+    m_Metadata:
+      m_Items:
+      - rid: 6906257346707324954
+  - m_Id: 303356047253504
+    m_Localized: "{highscore:: Nouveau record ! |} \nscore :{scoreshown}"
+    m_Metadata:
+      m_Items:
+      - rid: 6906257346707324954
+  - m_Id: 1792375121764352
+    m_Localized: "S\xE9lectionn\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3317827581763584
+    m_Localized: Voir plus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1792654286249984
+    m_Localized: "Am\xE9liorer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1792817922826240
+    m_Localized: Acheter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1793014975422464
+    m_Localized: "S\xE9lectionner"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1820922020356096
+    m_Localized: Argent :{amount}
+    m_Metadata:
+      m_Items:
+      - rid: 6906257346707324954
+  - m_Id: 2269042655092736
+    m_Localized: 'Vie : {amount}'
+    m_Metadata:
+      m_Items:
+      - rid: 6906257346707324954
+  - m_Id: 2269237572788224
+    m_Localized: "Multiplicateur de d\xE9g\xE2ts : {amount}"
+    m_Metadata:
+      m_Items:
+      - rid: 6906257346707324954
+  - m_Id: 2269378694340608
+    m_Localized: 'Vitesse : {amount}'
+    m_Metadata:
+      m_Items:
+      - rid: 6906257346707324954
+  - m_Id: 3050982152855552
+    m_Localized: Voulez-vous acheter {ship_name} pour {amount}$ ?
+    m_Metadata:
+      m_Items:
+      - rid: 6906257346707324954
+  - m_Id: 3051318439567360
+    m_Localized: "Voulez-vous am\xE9liorer {ship_name} pour {amount}$ ?"
+    m_Metadata:
+      m_Items:
+      - rid: 6906257346707324954
+  - m_Id: 3318056477515776
+    m_Localized: Niveau maximal atteint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5462634248790016
+    m_Localized: "Cette arme tire des lasers toutes les 0.15 secondes lorsqu'utilis\xE9e,
+      elle inflige 10 de d\xE9gats initialement et a une utilisation mod\xE9r\xE9e
+      de l'\xE9nergie.\nC'est l'arme par d\xE9faut en d\xE9but de jeu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5463175813128192
+    m_Localized: "Le bouclier absorbe les d\xE9gats qui lui parvienne, et utilise
+      de l'\xE9nergie \xE0 la place.\nLa consommation d'\xE9nergie lors de l'utilisation
+      du bouclier est assez faible."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5464849596276736
+    m_Localized: "Le missile est une bonne arme lorsque plusieurs cibles sont proches
+      l'une de l'autre, il explose lors d'une collision ou lorsque vous appuyez sur
+      la touche d'arme.\nIl fait beaucoup de d\xE9gats aux ennemies proches mais
+      utilise aussi beaucoup d'\xE9nergie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5467658622328832
+    m_Localized: "Co\xFBt :{amount}$"
+    m_Metadata:
+      m_Items:
+      - rid: 6906257346707324954
+  - m_Id: 29057807746588672
+    m_Localized: "Le cannon \xE0 plasma peut \xEAtre tr\xE8s dangereux selon le temps
+      que vous prenez \xE0 le charger, plus il prend de l'\xE9nergie, plus le plasma
+      grossit et plus les d\xE9gats sont importants."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29344165362917376
+    m_Localized: "Une version plus puissante du missile, avec une plus grande port\xE9e,
+      plus de d\xE9gats, une meilleure vitesse et la capacit\xE9 d'\xE9tourdir les
+      ennemis touch\xE9s par l'explosion, bien qu'elle consomme plus d'\xE9nergie."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 6906257346707324954
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00e06fbb0400000000e06f95e613010000e02f721e78060000e0efe6fc0f080000e06fa9ae0f080000e06f23dad60a0000e0af6f28d70a0000e06f0bdc0f080000e0ef79ce6c1300

@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: NotificationContent_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 136578d94199e44329944edb8919ad86, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8685346816
+    m_Localized: You destroyed a planet, your global influence is lowering
+    m_Metadata:
+      m_Items: []
+  - m_Id: 325829255168
+    m_Localized: You got a one-time power up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 946791768064
+    m_Localized: You were not welcome, you took damages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 789761220608
+    m_Localized: Your influence let you regenerate your health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2214289465344
+    m_Localized: This planet is hostile to you, enemies where called
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3596193241227264
+    m_Localized: You've defeated a boss, you received health, power up and your influence
+      to planets is increasing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19890897373093888
+    m_Localized: You have destroyed an hostile turret to a planet, your global influence
+      is increasing
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

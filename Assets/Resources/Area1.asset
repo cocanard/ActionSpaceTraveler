@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b327eeba16b5e44c4872dc774a1ff72b, type: 3}
+  m_Name: Area1
+  m_EditorClassIdentifier: 
+  star: {fileID: 6172837735173330311, guid: 0e657f30e591b47848392ec625dcb8b2, type: 3}
+  star_enabled: 1
+  star_startingspeed: 50
+  star_delay: 2
+  obstacles:
+  - {fileID: 9209081851798761129, guid: ca823d83a33584ca0b9c45e8d7cba115, type: 3}
+  obstacles_startingspeed: 50
+  obstacles_delay: 02000000
+  enemy_object:
+  - {fileID: 2310983929240479146, guid: 84a0c39e4662f46cd84e642f4c4cc2a4, type: 3}
+  - {fileID: 4998016890789514132, guid: 4a4e798e5783e486cb584ca366691da6, type: 3}
+  - {fileID: 2831323064023298883, guid: b437023ce065b48dfa8a5642e24f8fb7, type: 3}
+  - {fileID: 5305367843481323578, guid: d2bc4aaf62cb44af1a7e9bcdc1c07044, type: 3}
+  enemy_probabilities: 23000000460000005a00000064000000
+  enemy_startingspeed: 32000000330000003600000039000000
+  enemy_delay: 30
+  Boss_Object: {fileID: 6375125476260294170, guid: 994e6679c5e7e4af49323a99b4b0d34e, type: 3}
+  base_spawn: e8030000dc050000
+  boss_delay: 3000
