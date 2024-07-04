@@ -136,9 +136,10 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0b
+  bundleVersion: 1.0.1
   preloadedAssets:
   - {fileID: 11400000, guid: 02574dc5b606a498aa969a13eaab01a6, type: 2}
+  - {fileID: 11400000, guid: 88e97a82ef6ea4920ad915c142e290c9, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -823,6 +824,7 @@ PlayerSettings:
     PS4: 1
     PS5: 1
     Stadia: 1
+    Standalone: 4
     WebGL: 1
     Windows Store Apps: 1
     XboxOne: 1
@@ -919,7 +921,13 @@ PlayerSettings:
   windowsGamepadBackendHint: 0
   cloudProjectId: 19f178ec-9580-41b8-be2e-cd07a8075190
   framebufferDepthMemorylessMode: 0
-  qualitySettingsNames: []
+  qualitySettingsNames:
+  - Very Low
+  - Low
+  - Medium
+  - High
+  - Very High
+  - Ultra
   projectName: SpaceShip
   organizationId: cocanard
   cloudEnabled: 0

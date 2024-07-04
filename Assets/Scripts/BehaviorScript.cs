@@ -9,6 +9,7 @@ public class BehaviorScript : MonoBehaviour
 {
     public delegate void GlitchedEvent(GameObject obj);
     public static GlitchedEvent OnGlitchCreated;
+    [SerializeField] private bool Destroy = true;
 
     protected ushort reward;
     protected ushort _health;
@@ -53,6 +54,11 @@ public class BehaviorScript : MonoBehaviour
 
     public virtual void onAttackCollide(GameObject obj, Collider2D collision, Collision_Type c_type) { }
 
+    internal delegate void OnDestruction();
+
+    internal OnDestruction OnDestroyed;
+    
+
     internal void onDestroyed(float destroytime = 0)
     {
         DatasScript.save.money += reward;
@@ -68,6 +74,7 @@ public class BehaviorScript : MonoBehaviour
         {
             Object.Instantiate(Resources.Load<GameObject>($"Items/Debris ({Random.Range(1, 6)})"), transform.position, new Quaternion(0, 0, 0, 0));
         }
+        if(OnDestroyed is not null) OnDestroyed.Invoke();
         Object.Destroy(gameObject, destroytime);
     }
 

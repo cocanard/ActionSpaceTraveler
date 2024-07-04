@@ -54,7 +54,8 @@ public static class DatasScript
     {
         if (settings.DiscordPresence && discord_object is null)
         {
-            discord_object = UnityEngine.Object.Instantiate(Resources.Load<GameObject>("Discord"));
+            discord_object = new GameObject();
+            discord_object.AddComponent<DiscordActivity>();
         }
         else if(!settings.DiscordPresence && discord_object is not null)
         {
@@ -166,7 +167,7 @@ public class GameSave
         new() {name="Laser", cooldown=0.15f, damage=10, hold=true, possessed=true, wait_time=0, energy=2, type=WeaponsType.LaserWeapon, cost = 0, baseweapon=Resources.Load<GameObject>("Laser"),speed=3 },
         new() {name="Missile", cooldown=0, damage=50, hold=false, possessed=false, wait_time=0.2f, energy=20, type=WeaponsType.BombWeapon, cost=750, baseweapon=Resources.Load<GameObject>("Missile"), speed=2 },
         new() {name="Shield", cooldown=0.1f, damage=0, hold=true, possessed=false, wait_time=0, energy=0.5f, type=WeaponsType.ShieldWeapon, cost=2000, baseweapon=Resources.Load<GameObject>("Shield"), speed=0 },
-        new() {name="Plasma Cannon", cooldown=0.2f, damage=10, hold=true, possessed=false, wait_time=2, energy=4, type=WeaponsType.PlasmaWeapon, cost=5000, baseweapon=Resources.Load<GameObject>("Orb"), speed=3 },
+        new() {name="Plasma Cannon", cooldown=0.2f, damage=10, hold=true, possessed=false, wait_time=0.5f, energy=4, type=WeaponsType.PlasmaWeapon, cost=5000, baseweapon=Resources.Load<GameObject>("Orb"), speed=3 },
         new() {name="Overpowered Missile", cooldown=0, damage=80, hold=false, possessed=false, wait_time=0.2f, energy=40, type=WeaponsType.BombWeapon, cost=4000, baseweapon=Resources.Load<GameObject>("OverpoweredMissile"), speed = 3 },
     };
     public int currentship = 0;

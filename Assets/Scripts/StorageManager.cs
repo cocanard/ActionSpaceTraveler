@@ -18,6 +18,7 @@ public class StorageManager : MonoBehaviour
 {
     public static GameObject Storage;
     [SerializeField] GameObject Cam;
+
     float campos;
     public static bool isBoss { get; private set; }
     public delegate void OnEnemyCreated(GameObject enemy);
@@ -44,7 +45,8 @@ public class StorageManager : MonoBehaviour
         enemyinfo = (0, new(), true);
         obstacleinfos = (new float[area_info.obstacles.Length], new(), true);
         circleinfos = (0, new(), true);
-        planetinfo = (Resources.Load<GameObject>("Storage/Planet"), Resources.LoadAll<Sprite>("Planets"), new(), 50, -2500, new(), true);
+        var planets = Resources.Load<ResourcesList>("Planets");
+        planetinfo = (planets.ObjectArray[0], planets.SpriteArray, new(), 50, -2500, new(), true);
 
         portal = Resources.Load<GameObject>("Storage/Portal");
         if(area_info.star_enabled)
@@ -59,7 +61,6 @@ public class StorageManager : MonoBehaviour
     void FixedUpdate()
     {
         checklist(circleinfos.entities);
-        checklist(obstacleinfos.entities);
         checklist(planetinfo.entities);
 
         campos += SpaceShipPlayer.Speed * Time.fixedDeltaTime;
@@ -156,11 +157,11 @@ public class StorageManager : MonoBehaviour
 
     void checklist(List<GameObject> l)
     {
-        foreach (GameObject obj in l.Where(w => w == null).ToList())
+        foreach (GameObject obj in l.Where(w => w is null).ToList())
         {
             l.Remove(obj);
         }
-        foreach (GameObject obj in l.Where(w => ((w.GetComponent<SpriteRenderer>() ? !w.GetComponent<SpriteRenderer>().isVisible : true) && !w.GetComponentsInChildren<SpriteRenderer>().Where(x => x.isVisible).Any())
+        foreach (GameObject obj in l.Where(w => (w.GetComponent<SpriteRenderer>() ? !w.GetComponent<SpriteRenderer>().isVisible : true) && !w.GetComponentsInChildren<SpriteRenderer>().Where(x => x.isVisible).Any()
             && w.transform.position.x < SpaceShipPlayer.plr.transform.position.x).ToList()) // if an object is not renderer and behing the player
         {
             l.Remove(obj);
@@ -185,12 +186,13 @@ public class StorageManager : MonoBehaviour
         GameObject clone = Object.Instantiate(area_info.obstacles[0], new Vector3(Random.Range(200, 250), Random.Range(-150, 150), 0), Quaternion.Euler(0, 0, Random.Range(0, 360)));
         clone.transform.SetParent(transform);
 
-        clone.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>($"Asteroids/Asteroid {Random.Range(1, 6)}");
+        clone.GetComponent<SpriteRenderer>().sprite = Resources.Load<ResourcesList>("Asteroids").SpriteArray[Random.Range(0, 6)];
         clone.GetComponent<Rigidbody2D>().velocity = (Vector3.zero - clone.transform.position).normalized * SpaceShipPlayer.Speed * 2;
         clone.GetComponent<SetUpScript>().Init();
         int rnd = Random.Range((int)clone.transform.localScale.x, (int)(clone.transform.localScale.x * 1.5f) + 1);
         clone.transform.localScale = new Vector3(rnd, rnd, 1);
         obstacleinfos.entities.Add(clone);
+        clone.GetComponent<BehaviorScript>().OnDestroyed += () => obstacleinfos.entities.Remove(clone);
     }
 
     public void create_asteroid(Vector2 point, Vector2 direction)
@@ -198,12 +200,13 @@ public class StorageManager : MonoBehaviour
         GameObject clone = Object.Instantiate(area_info.obstacles[0], point, Quaternion.Euler(0, 0, Random.Range(0, 360)));
         clone.transform.SetParent(transform);
 
-        clone.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>($"Asteroids/Asteroid {Random.Range(1, 6)}");
+        clone.GetComponent<SpriteRenderer>().sprite = Resources.Load<ResourcesList>("Asteroids").SpriteArray[Random.Range(0, 7)];
         clone.GetComponent<Rigidbody2D>().velocity = direction * SpaceShipPlayer.Speed;
         clone.GetComponent<SetUpScript>().Init();
         int rnd = Random.Range((int)clone.transform.localScale.x, (int)(clone.transform.localScale.x * 1.5f) + 1);
         clone.transform.localScale = new Vector3(rnd, rnd, 1);
         obstacleinfos.entities.Add(clone);
+        clone.GetComponent<BehaviorScript>().OnDestroyed += () => obstacleinfos.entities.Remove(clone);
     }
 
     public IEnumerator create_enemyship(ushort number, Transform spawnpoint = null, int[]  avoided_enemies = null)

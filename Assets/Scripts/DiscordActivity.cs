@@ -24,7 +24,7 @@ public class DiscordActivity : MonoBehaviour
         }
         try
         {
-            connection = new Discord.Discord(1138853370472435833, (uint)Discord.CreateFlags.NoRequireDiscord);
+            connection = new Discord.Discord(0, (uint)Discord.CreateFlags.NoRequireDiscord);
             var ActivityManager = connection.GetActivityManager();
             activity = new Discord.Activity
             {

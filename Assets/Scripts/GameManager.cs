@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Camera.Find("Canvas/Image").GetComponent<Image>().sprite = Resources.Load<Sprite>("Background/" + worldindex);
+        Camera.Find("Canvas/Image").GetComponent<Image>().sprite = Resources.Load<ResourcesList>("Backgrounds").SpriteArray[worldindex];
         DatasScript.checkFolder();
         DatasScript.UpdateSettingsInfo();
         GameObject spaceship =  Object.Instantiate(Resources.Load<GameObject>(DatasScript.save.get_current_ship().obj), new Vector3(0, 0, 0), Quaternion.Euler(0, 0, -90));
